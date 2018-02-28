@@ -13,10 +13,11 @@ This image is used to run flask upload file applications. To start a container u
 docker run --name flask-upload-app --restart=always \
 	-p 80:911 \
 	-v /local/uploads:/root \
+	[-v /path/to/app/:/app \]
 	-d Registry:5000/images/alpine-flask-upload-app -d
 ```
 
-`-v /path/to/app/:/app` - specifies the path to the folder containing a file named app.py, which should be your main application
+`-v /path/to/app/:/app` - with this can specifies the path to the folder containing a file named app.py, which should be your main application（By default, you don't have to use it, because the Dockerfile has already defined.)
 
 `-p 80:911` - the image exposes port 911, in this example it is mapped to port 80 on the host
 
