@@ -66,7 +66,7 @@ Your app.py file must have a section similiar to the following example to start 
 
 ```python
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=911, debug=True)
 ```
 
 To get the command line output of your app use `docker logs -f CONTAINER_ID/NAME`.
